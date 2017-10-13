@@ -76,7 +76,7 @@ return [
         'app_id' => env('WECHAT_OFFICIAL_ACCOUNT_APPID', 'wx15ab9acf37202a01'),         // AppID
         'secret' => env('WECHAT_OFFICIAL_ACCOUNT_SECRET', 'd4624c36b6795d1d99dcf0547af5443d'),     // AppSecret
         'token' => env('WECHAT_OFFICIAL_ACCOUNT_TOKEN', 'oryxtc1992'),          // Token
-        'aes_key' => env('WECHAT_OFFICIAL_ACCOUNT_AES_KEY', ''),                    // EncodingAESKey
+        'aes_key' => env('WECHAT_OFFICIAL_ACCOUNT_AES_KEY', 'test-wechat.oryxtc.xyz'),                    // EncodingAESKey
 
         /*
          * OAuth 配置

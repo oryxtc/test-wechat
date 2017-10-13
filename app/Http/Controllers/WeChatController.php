@@ -10,7 +10,7 @@ class WeChatController extends Controller
     public function __construct()
     {
         $this->middleware('web');
-//        $this->middleware('wechat.oauth');
+        $this->middleware('wechat.oauth');
     }
 
     /**
@@ -20,6 +20,9 @@ class WeChatController extends Controller
      */
     public function serve()
     {
+        Log::info('request arrived.');
+        echo 1;
+        exit;
         $app = app('wechat.official_account');
         $app->server->push(function($message){
             return "欢迎关注 overtrue！";

@@ -25,6 +25,6 @@ class WeChatController extends Controller
             return "欢迎关注 overtrue！";
         });
 
-        return $app->server->serve()->send();
+        return $app->server->serve();
     }
 }

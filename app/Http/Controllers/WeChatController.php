@@ -24,7 +24,7 @@ class WeChatController extends Controller
     {
         $app = app('wechat.official_account');
         $app->server->push(function($message){
-            return "test-wechat.oryxtc.xyz/index";
+            return "https://test-wechat.oryxtc.xyz/index";
         });
 
         return $app->server->serve();

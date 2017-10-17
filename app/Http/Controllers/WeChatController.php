@@ -11,17 +11,9 @@ class WeChatController extends Controller
     public function __construct()
     {
         $this->middleware('web');
-        $this->middleware('wechat.oauth')->except('index');
+        $this->middleware('wechat.oauth')->except('serve');
     }
 
-    public function index(){
-        $app = app('wechat.official_account');
-        $app->server->push(function($message){
-            return "欢迎关注 index！";
-        });
-
-        return $app->server->serve();
-    }
 
     /**
      * 处理微信的请求消息
@@ -32,7 +24,7 @@ class WeChatController extends Controller
     {
         $app = app('wechat.official_account');
         $app->server->push(function($message){
-            return "欢迎关注 overtrue！";
+            return "test-wechat.oryxtc.xyz/index";
         });
 
         return $app->server->serve();

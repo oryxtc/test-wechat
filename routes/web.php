@@ -17,5 +17,7 @@ Route::get('/', function () {
 
 Route::any('/wechat', 'WeChatController@serve');
 
+Route::any('/index', 'WeChatController@index');
+
 Route::any('/.well-known/acme-challenge/{id}', 'CertbotController@index');
 

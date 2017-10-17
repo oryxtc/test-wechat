@@ -14,6 +14,10 @@ class WeChatController extends Controller
         $this->middleware('wechat.oauth')->except('serve');
     }
 
+    public function index(){
+        $id=session('wechat.oauth_user');
+        return $id;
+    }
 
     /**
      * 处理微信的请求消息
